@@ -106,7 +106,7 @@ public class Admin extends User {
         String query = "INSERT INTO APP.QUESTION (TITLE,QUESTION, OPTION1, OPTION2, OPTION3,  ANSWER) VALUES (?, ?, ?, ?, ?, ?)";
 
         try ( Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);  PreparedStatement stmt = connection.prepareStatement(query)) {
- 
+    
             stmt.setString(1, title);
             stmt.setString(2, question);
             stmt.setString(3, option1);
