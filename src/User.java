@@ -106,10 +106,6 @@ public class User {
         }
     }
 
-    public boolean enter(String login, String password) {
-
-        return false;
-    }
 
     public boolean userlogin(String username, String password) throws SQLException {
         String query = "INSERT INTO APP.REGISTRATION (USERNAME, PASSWORD) VALUES (?, ?)";

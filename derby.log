@@ -1,19 +1,75 @@
-Tue Jun 11 20:45:39 EEST 2024 : ??????? ?????? Apache Derby Network Server - 10.15.2.0 - (1873585) ??????? ? ????? ????????? ?????????? ?? ????? 1527 ?? {3} 
+Wed Jun 12 00:18:42 EEST 2024 : ??????? ?????? Apache Derby Network Server - 10.15.2.0 - (1873585) ??????? ? ????? ????????? ?????????? ?? ????? 1527 ?? {3} 
 ----------------------------------------------------------------
-Tue Jun 11 20:45:41 EEST 2024:
- ???????????? ???????? Derby ?????? The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): ????????? a816c00e-0190-0867-d10d-ffffb67ca934
-? ???????? ???? ?????? C:\Users\User\OneDrive\??????? ????\PD1_Kizlo\connect jdk.internal.loader.ClassLoaders$AppClassLoader@659e0bfd 
+Wed Jun 12 00:18:42 EEST 2024:
+ ???????????? ???????? Derby ?????? The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): ????????? a816c00e-0190-092a-dd97-000022f07cdc
+? ???????? ???? ?????? C:\Users\User\OneDrive\?????????\net\PD1_Kizlo\connect jdk.internal.loader.ClassLoaders$AppClassLoader@659e0bfd 
 
 java.vendor=Oracle Corporation
 user.dir=C:\db-derby-10.15.2.0-bin
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
-derby.system.home=C:\Users\User\OneDrive\??????? ????\PD1_Kizlo
+derby.system.home=C:\Users\User\OneDrive\?????????\net\PD1_Kizlo
 ??????? ????????? ??????? ???? ?????? - derby.database.classpath=''
+Wed Jun 12 00:18:43 EEST 2024 Thread[DRDAConnThread_2,5,main] (XID = 2176), (SESSIONID = 0), (DATABASE = connect), (DRDAID = {1}), Cleanup action starting
+java.sql.SQLNonTransientConnectionException: Connection authentication failure occurred.  Reason: Invalid authentication..
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:81)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:141)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:225)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:220)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3215)
+	at org.apache.derby.impl.jdbc.EmbedConnection.checkUserCredentials(EmbedConnection.java:1320)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:450)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:660)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:656)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
+	at org.apache.derby.iapi.jdbc.InternalDriver.getNewEmbedConnection(InternalDriver.java:654)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:300)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:967)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:125)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:253)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1476)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1426)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3380)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1210)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1010)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:300)
+Caused by: ERROR 08004: Connection authentication failure occurred.  Reason: Invalid authentication..
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory.java:170)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:75)
+	... 20 more
+============= begin nested exception, level (1) ===========
+ERROR 08004: Connection authentication failure occurred.  Reason: Invalid authentication..
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory.java:170)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:75)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:141)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:225)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:220)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3215)
+	at org.apache.derby.impl.jdbc.EmbedConnection.checkUserCredentials(EmbedConnection.java:1320)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:450)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:660)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:656)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
+	at org.apache.derby.iapi.jdbc.InternalDriver.getNewEmbedConnection(InternalDriver.java:654)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:300)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:967)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:125)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:253)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1476)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1426)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3380)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1210)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1010)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:300)
+============= end nested exception, level (1) ===========
+Cleanup action completed
+Wed Jun 12 00:18:43 EEST 2024 Thread[DRDAConnThread_2,5,main] (DATABASE = connect), (DRDAID = {1}), Connection authentication failure occurred.  Reason: Invalid authentication..
 ----------------------------------------------------------------
-Tue Jun 11 23:40:12 EEST 2024: Shutting down Derby engine
+Wed Jun 12 01:15:28 EEST 2024: Shutting down Derby engine
 ----------------------------------------------------------------
-Tue Jun 11 23:40:12 EEST 2024:
-??????????? ?????? ?????????? a816c00e-0190-0867-d10d-ffffb67ca934
+Wed Jun 12 01:15:28 EEST 2024:
+??????????? ?????? ?????????? a816c00e-0190-092a-dd97-000022f07cdc
 ----------------------------------------------------------------

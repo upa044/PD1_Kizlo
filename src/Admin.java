@@ -102,16 +102,16 @@ public class Admin extends User {
 
     }
 
-    public boolean addQuestion(String question, String option1, String option2, String option3, String option4, String answer) {
-        String query = "INSERT INTO APP.TEST (QUESTION, OPTION1, OPTION2, OPTION3, OPTION4, ANSWER) VALUES (?, ?, ?, ?, ?, ?)";
+    public boolean addQuestion(String title, String question, String option1, String option2, String option3,  String answer) {
+        String query = "INSERT INTO APP.QUESTION (TITLE,QUESTION, OPTION1, OPTION2, OPTION3,  ANSWER) VALUES (?, ?, ?, ?, ?, ?)";
 
         try ( Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);  PreparedStatement stmt = connection.prepareStatement(query)) {
-
-            stmt.setString(1, question);
-            stmt.setString(2, option1);
-            stmt.setString(3, option2);
-            stmt.setString(4, option3);
-            stmt.setString(5, option4);
+ 
+            stmt.setString(1, title);
+            stmt.setString(2, question);
+            stmt.setString(3, option1);
+            stmt.setString(4, option2);
+            stmt.setString(5, option3);
             stmt.setString(6, answer);
 
             int rowsAff = stmt.executeUpdate();
@@ -128,6 +128,8 @@ public class Admin extends User {
 
     public void removeQuestion(Question question) {
     }
+    
+  
 
     public void removeUser(JTable userTable) {
         int selectedRow = userTable.getSelectedRow();
