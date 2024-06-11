@@ -1,10 +1,25 @@
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.*;
 
 public class Tester {
     
-    private List<String> user = new ArrayList<> ();
-    private List<Integer> answer = new ArrayList<> ();
-    private List<String> currentUser = new ArrayList<> ();
+   
+    
+    
+    String password;
+    String question;
+    String option1;
+    String option2;
+    String option3;
+    String option4;
+    String answer;
+    static final String DB_URL = "jdbc:derby://localhost:1527/connect";
+    static final String DB_USER = "admin44";
+    static final String DB_PASSWD = "Qwerty1234";
     
     public void main(String[] args){
         
@@ -20,7 +35,7 @@ public class Tester {
         
     } 
     
-    private void save(){
+    public void save(String question, String option1, String option2, String option3, String option4, String answer ){
         
     }
     
