@@ -6,7 +6,6 @@ import javax.swing.table.DefaultTableModel;
 
 public class Admin extends User {
 
-
     String question;
     String option1;
     String option2;
@@ -106,8 +105,7 @@ public class Admin extends User {
     public boolean addQuestion(String question, String option1, String option2, String option3, String option4, String answer) {
         String query = "INSERT INTO APP.TEST (QUESTION, OPTION1, OPTION2, OPTION3, OPTION4, ANSWER) VALUES (?, ?, ?, ?, ?, ?)";
 
-        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);
-                PreparedStatement stmt = connection.prepareStatement(query)) {
+        try ( Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);  PreparedStatement stmt = connection.prepareStatement(query)) {
 
             stmt.setString(1, question);
             stmt.setString(2, option1);
@@ -132,46 +130,50 @@ public class Admin extends User {
     }
 
     public void removeUser(JTable userTable) {
-      int selectedRow = userTable.getSelectedRow();
-    if (selectedRow >= 0) {
-        String username = (String) userTable.getValueAt(selectedRow, 0);
-        int columnCount = userTable.getColumnCount();
-        String group = "";
+        int selectedRow = userTable.getSelectedRow();
+        if (selectedRow >= 0) {
+            String username = (String) userTable.getValueAt(selectedRow, 0);
+            int columnCount = userTable.getColumnCount();
+            String group = "";
 
-        
-        for (int i = 0; i < columnCount; i++) {
-            if ("GRUP".equals(userTable.getColumnName(i))) {
-                group = (String) userTable.getValueAt(selectedRow, i);
-                break;
+            
+            for (int i = 0; i < columnCount; i++) {
+                if ("GRUP".equals(userTable.getColumnName(i))) {
+                    group = (String) userTable.getValueAt(selectedRow, i);
+                    break;
+                }
             }
-        }
 
-        if ("Skolotajs".equals(group)) {
-            JOptionPane.showMessageDialog(null, "Jūs nevarat dzēst šo personu, jo viņš ir Skolotajs.", "Kļūda", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-
-        String query = "DELETE FROM APP.REGISTRATION WHERE USERNAME = ?";
-
-        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);
-             PreparedStatement stmt = connection.prepareStatement(query)) {
-
-            stmt.setString(1, username);
-
-            int rowsAff = stmt.executeUpdate();
-            if (rowsAff > 0) {
-                System.out.println("User " + username + " deleted successfully.");
-                ((DefaultTableModel) userTable.getModel()).removeRow(selectedRow);
-            } else {
-                System.out.println("User " + username + " not found.");
+            if ("Skolotajs".equals(group)) {
+                JOptionPane.showMessageDialog(null, "Jūs nevarat dzēst šo personu, jo viņš ir Skolotajs.", "Kļūda", JOptionPane.ERROR_MESSAGE);
+                return;
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
+
+            String query1 = "DELETE FROM APP.REGISTRATION WHERE USERNAME = ?";
+            String query2 = "DELETE FROM APP.USERS WHERE USERNAME = ?";
+
+            try ( Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);  PreparedStatement stmt1 = connection.prepareStatement(query1);  PreparedStatement stmt2 = connection.prepareStatement(query2)) {
+
+               
+                stmt1.setString(1, username);
+                int rowsAff1 = stmt1.executeUpdate();
+
+                // Удаление из таблицы User
+                stmt2.setString(1, username);
+                int rowsAff2 = stmt2.executeUpdate();
+
+                if (rowsAff1 > 0 && rowsAff2 > 0) {
+                    System.out.println("User " + username + " deleted successfully.");
+                    ((DefaultTableModel) userTable.getModel()).removeRow(selectedRow);
+                } else {
+                    System.out.println("User " + username + " not found.");
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } else {
+            System.out.println("No user selected.");
         }
-    } else {
-        System.out.println("No user selected.");
-    }
-        
 
     }
 

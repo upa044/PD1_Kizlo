@@ -1,5 +1,6 @@
 
 import java.sql.*;
+import javax.swing.JOptionPane;
 
 public class User {
 
@@ -136,6 +137,24 @@ public class User {
             stmt.setString(1, username);
             stmt.setString(2, pass);
             stmt.setString(3, group);
+
+            int rowsAff = stmt.executeUpdate();
+            return rowsAff > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    
+    public boolean changePassword(String username, String newPassword) {
+       String query = "UPDATE APP.USERS SET PASSWORD = ? WHERE USERNAME = ?";
+
+        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);
+             PreparedStatement stmt = connection.prepareStatement(query)) {
+
+            stmt.setString(1, newPassword);
+            stmt.setString(2, username);
+            
 
             int rowsAff = stmt.executeUpdate();
             return rowsAff > 0;
