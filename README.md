@@ -1,1 +1,1 @@
-# PD1_Kizlo
+# PD1_Kizlo Tema: Sports un zinašanas.
