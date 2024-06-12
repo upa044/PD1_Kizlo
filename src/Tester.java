@@ -25,17 +25,12 @@ public class Tester {
         
     }
     
-    private void addUser (String name, String login, String password, String repition){
-        
-    }
     
-    private User findUser(String login,String password){
-        
-        return null;
-        
-    } 
     
-    public void save(String question, String option1, String option2, String option3, String option4, String answer ){
+    
+    
+    public void save(String question, String option1, String option2, String option3, String answer ){
+        
         
     }
     

@@ -14,26 +14,10 @@ public class Question {
     
     public void addQuestion(String test,String[] answer, int right){
         
-    }
-    
-    public void Question(String test,String[] answer, int right){
         
     }
     
     
-    public void getText(String text){
-        
-    }
-    
-    public void getAnswers(String[]answers){
-        
-    }
-    
-    public boolean isCorrect(int answer){
-        
-        return false;
-        
-    }
     
     
 }
