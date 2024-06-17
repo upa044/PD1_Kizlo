@@ -247,8 +247,6 @@ public class Admin extends User {
 
     }
 
-    public void rezultUser(Tester rezult, Tester user) {
-
-    }
+   
 
 }

@@ -21,7 +21,7 @@ public class GUI extends javax.swing.JFrame {
     private String[][] testData;
     private int punkt = 0;
     private int megsk = 0;
-    
+
     public GUI() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -59,8 +59,8 @@ public class GUI extends javax.swing.JFrame {
         jLabel35 = new javax.swing.JLabel();
         Megsk = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
+        UserR = new javax.swing.JLabel();
+        Nosaukums = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         logerror = new javax.swing.JDialog();
@@ -229,7 +229,6 @@ public class GUI extends javax.swing.JFrame {
 
         Registr.setBounds(new java.awt.Rectangle(0, 0, 540, 428));
         Registr.setMinimumSize(new java.awt.Dimension(540, 428));
-        Registr.setPreferredSize(new java.awt.Dimension(540, 428));
         Registr.setSize(new java.awt.Dimension(540, 428));
         Registr.getContentPane().setLayout(null);
 
@@ -379,7 +378,6 @@ public class GUI extends javax.swing.JFrame {
 
         Rezult.setBounds(new java.awt.Rectangle(0, 0, 671, 455));
         Rezult.setMinimumSize(new java.awt.Dimension(671, 455));
-        Rezult.setPreferredSize(new java.awt.Dimension(671, 455));
         Rezult.setSize(new java.awt.Dimension(671, 455));
         Rezult.getContentPane().setLayout(null);
 
@@ -490,13 +488,13 @@ public class GUI extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(0, 0, 0));
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setText("user name:");
+        UserR.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        UserR.setForeground(new java.awt.Color(255, 255, 255));
+        UserR.setText("User name:");
 
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setText("group:");
+        Nosaukums.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Nosaukums.setForeground(new java.awt.Color(255, 255, 255));
+        Nosaukums.setText("Testa nosaukums:");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -505,24 +503,23 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(UserR, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addComponent(Nosaukums, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addComponent(jLabel15)
+                .addComponent(UserR)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel16)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addComponent(Nosaukums)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         Rezult.getContentPane().add(jPanel4);
-        jPanel4.setBounds(520, 0, 150, 140);
+        jPanel4.setBounds(520, 0, 150, 100);
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -833,6 +830,11 @@ public class GUI extends javax.swing.JFrame {
         });
 
         jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/hiclipart.com.png"))); // NOI18N
+        jLabel42.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel42MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
@@ -1020,6 +1022,11 @@ public class GUI extends javax.swing.JFrame {
         });
 
         jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/hiclipart.com.png"))); // NOI18N
+        jLabel43.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel43MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -1131,6 +1138,11 @@ public class GUI extends javax.swing.JFrame {
         });
 
         jLabel44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/hiclipart.com.png"))); // NOI18N
+        jLabel44.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel44MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -1233,6 +1245,11 @@ public class GUI extends javax.swing.JFrame {
         jLabel17.setText("Password change");
 
         jLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/hiclipart.com.png"))); // NOI18N
+        jLabel45.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel45MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -1657,6 +1674,11 @@ public class GUI extends javax.swing.JFrame {
         });
 
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/hiclipart.com.png"))); // NOI18N
+        jLabel26.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel26MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -1767,6 +1789,11 @@ public class GUI extends javax.swing.JFrame {
         });
 
         jLabel48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/hiclipart.com.png"))); // NOI18N
+        jLabel48.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel48MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
@@ -1824,7 +1851,6 @@ public class GUI extends javax.swing.JFrame {
 
         Help.setBounds(new java.awt.Rectangle(0, 0, 465, 535));
         Help.setMinimumSize(new java.awt.Dimension(465, 535));
-        Help.setPreferredSize(new java.awt.Dimension(465, 535));
         Help.setSize(new java.awt.Dimension(465, 535));
         Help.getContentPane().setLayout(null);
 
@@ -2049,7 +2075,7 @@ public class GUI extends javax.swing.JFrame {
             this.setVisible(false);
 
             if ("Skolotajs".equals(grup)) {
-               test.loadTitles();
+                test.loadTitles();
                 AdminPan.pack();
                 AdminPan.setLocationRelativeTo(null);
                 AdminPan.setVisible(true);
@@ -2068,9 +2094,8 @@ public class GUI extends javax.swing.JFrame {
             logerror.setLocationRelativeTo(null);
             errorL.setText("Invalid login or password");
         }
-       
+
         Password.setText("");
-        
 
 
     }//GEN-LAST:event_IenaktActionPerformed
@@ -2110,13 +2135,11 @@ public class GUI extends javax.swing.JFrame {
         LoginR.setText("");
         Date.setText("");
 
-
         Registr.dispose();
         setVisible(true);
 
 
     }//GEN-LAST:event_IelogotiesRActionPerformed
-
 
 
     private void iziet1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iziet1ActionPerformed
@@ -2128,7 +2151,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_izietActionPerformed
 
     private void MeiginatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MeiginatActionPerformed
-       
+
         Question db = new Question(jList1);
         title = jList1.getSelectedValue();
         if (title != null) {
@@ -2170,19 +2193,19 @@ public class GUI extends javax.swing.JFrame {
             JRB13.setActionCommand(JRB13.getText());
             JRB14.setActionCommand(JRB14.getText());
             JRB15.setActionCommand(JRB15.getText());
-            
+
             ANS1.setText("");
             ANS2.setText("");
             ANS3.setText("");
             ANS4.setText("");
             ANS5.setText("");
-            
+
             buttonGroup1.clearSelection();
             buttonGroup2.clearSelection();
             buttonGroup3.clearSelection();
             buttonGroup4.clearSelection();
             buttonGroup5.clearSelection();
-            
+
             JRB1.setEnabled(true);
             JRB2.setEnabled(true);
             JRB3.setEnabled(true);
@@ -2198,129 +2221,123 @@ public class GUI extends javax.swing.JFrame {
             JRB13.setEnabled(true);
             JRB14.setEnabled(true);
             JRB15.setEnabled(true);
-            
-            
-            
+
             megsk++;
             Test.pack();
             Test.setLocationRelativeTo(null);
             Test.setVisible(true);
         } else {
-          
+
             logerror.setVisible(true);
             logerror.pack();
             logerror.setLocationRelativeTo(null);
             errorL.setText("Please select a test.");
         }
-        
+
     }//GEN-LAST:event_MeiginatActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-     Question db = new Question(jList1);
-     punkt = 0;
-     String checkAnswer1 = "SELECT * FROM APP.ANSWER WHERE TITLE=? AND AN1 =? ";
-     String checkAnswer2 = "SELECT * FROM APP.ANSWER WHERE TITLE=? AND AN2 =? ";
-     String checkAnswer3 = "SELECT * FROM APP.ANSWER WHERE TITLE=? AND AN3 =? ";
-     String checkAnswer4 = "SELECT * FROM APP.ANSWER WHERE TITLE=? AND AN4 =? ";
-     String checkAnswer5  = "SELECT * FROM APP.ANSWER WHERE TITLE=? AND AN5 =? ";
-     title = jList1.getSelectedValue();
+        Question db = new Question(jList1);
+        punkt = 0;
+        String checkAnswer1 = "SELECT * FROM APP.ANSWER WHERE TITLE=? AND AN1 =? ";
+        String checkAnswer2 = "SELECT * FROM APP.ANSWER WHERE TITLE=? AND AN2 =? ";
+        String checkAnswer3 = "SELECT * FROM APP.ANSWER WHERE TITLE=? AND AN3 =? ";
+        String checkAnswer4 = "SELECT * FROM APP.ANSWER WHERE TITLE=? AND AN4 =? ";
+        String checkAnswer5 = "SELECT * FROM APP.ANSWER WHERE TITLE=? AND AN5 =? ";
+        title = jList1.getSelectedValue();
 
-        try (Connection connection = DriverManager.getConnection(Question.DB_URL, Question.DB_USER, Question.DB_PASSWD);
-             ) {
-             PreparedStatement pst;
-             ResultSet rs;
-             pst=connection.prepareStatement(checkAnswer1);
-             pst.setString(1,title);
-             pst.setString(2,buttonGroup1.getSelection().getActionCommand());
-             rs=pst.executeQuery();
-             if(rs.next()){
+        try (Connection connection = DriverManager.getConnection(Question.DB_URL, Question.DB_USER, Question.DB_PASSWD);) {
+            PreparedStatement pst;
+            ResultSet rs;
+            pst = connection.prepareStatement(checkAnswer1);
+            pst.setString(1, title);
+            pst.setString(2, buttonGroup1.getSelection().getActionCommand());
+            rs = pst.executeQuery();
+            if (rs.next()) {
                 punkt++;
                 ANS1.setText("Pareiza atbilde");
-                 ANS1.setForeground(Color.GREEN);
-             }else{
-                 ANS1.setText("Atbilde nav pareiza");
-                 ANS1.setForeground(Color.RED);
+                ANS1.setForeground(Color.GREEN);
+            } else {
+                ANS1.setText("Atbilde nav pareiza");
+                ANS1.setForeground(Color.RED);
 
-             }
-             JRB1.setEnabled(false);
-             JRB2.setEnabled(false);
-             JRB3.setEnabled(false);
+            }
+            JRB1.setEnabled(false);
+            JRB2.setEnabled(false);
+            JRB3.setEnabled(false);
 
-             pst=connection.prepareStatement(checkAnswer2);
-             pst.setString(1,title);
-             pst.setString(2,buttonGroup2.getSelection().getActionCommand());
-             rs=pst.executeQuery();
-             if(rs.next()){
+            pst = connection.prepareStatement(checkAnswer2);
+            pst.setString(1, title);
+            pst.setString(2, buttonGroup2.getSelection().getActionCommand());
+            rs = pst.executeQuery();
+            if (rs.next()) {
                 punkt++;
                 ANS2.setText("Pareiza atbilde");
                 ANS2.setForeground(Color.GREEN);
-             }else{
-                 ANS2.setText("Atbilde nav pareiza");
-                 ANS2.setForeground(Color.RED);
+            } else {
+                ANS2.setText("Atbilde nav pareiza");
+                ANS2.setForeground(Color.RED);
 
-             }
-             JRB4.setEnabled(false);
-             JRB5.setEnabled(false);
-             JRB6.setEnabled(false);
+            }
+            JRB4.setEnabled(false);
+            JRB5.setEnabled(false);
+            JRB6.setEnabled(false);
 
-             pst=connection.prepareStatement(checkAnswer3);
-             pst.setString(1,title);
-             pst.setString(2,buttonGroup3.getSelection().getActionCommand());
-             rs=pst.executeQuery();
-             if(rs.next()){
+            pst = connection.prepareStatement(checkAnswer3);
+            pst.setString(1, title);
+            pst.setString(2, buttonGroup3.getSelection().getActionCommand());
+            rs = pst.executeQuery();
+            if (rs.next()) {
                 punkt++;
                 ANS3.setText("Pareiza atbilde");
-                 ANS3.setForeground(Color.GREEN);
-             }else{
-                 ANS3.setText("Atbilde nav pareiza");
-                 ANS3.setForeground(Color.RED);
+                ANS3.setForeground(Color.GREEN);
+            } else {
+                ANS3.setText("Atbilde nav pareiza");
+                ANS3.setForeground(Color.RED);
 
-             }
-             JRB7.setEnabled(false);
-             JRB8.setEnabled(false);
-             JRB9.setEnabled(false);
+            }
+            JRB7.setEnabled(false);
+            JRB8.setEnabled(false);
+            JRB9.setEnabled(false);
 
-             pst=connection.prepareStatement(checkAnswer4);
-             pst.setString(1,title);
-             pst.setString(2,buttonGroup4.getSelection().getActionCommand());
-             rs=pst.executeQuery();
-             if(rs.next()){
+            pst = connection.prepareStatement(checkAnswer4);
+            pst.setString(1, title);
+            pst.setString(2, buttonGroup4.getSelection().getActionCommand());
+            rs = pst.executeQuery();
+            if (rs.next()) {
                 punkt++;
                 ANS4.setText("Pareiza atbilde");
                 ANS4.setForeground(Color.GREEN);
-             }else{
-                 ANS4.setText("Atbilde nav pareiza");
-                 ANS4.setForeground(Color.RED);
+            } else {
+                ANS4.setText("Atbilde nav pareiza");
+                ANS4.setForeground(Color.RED);
 
-             }
-             JRB10.setEnabled(false);
-             JRB11.setEnabled(false);
-             JRB12.setEnabled(false);
+            }
+            JRB10.setEnabled(false);
+            JRB11.setEnabled(false);
+            JRB12.setEnabled(false);
 
-             pst=connection.prepareStatement(checkAnswer5);
-             pst.setString(1,title);
-             pst.setString(2,buttonGroup5.getSelection().getActionCommand());
-             rs=pst.executeQuery();
-             if(rs.next()){
+            pst = connection.prepareStatement(checkAnswer5);
+            pst.setString(1, title);
+            pst.setString(2, buttonGroup5.getSelection().getActionCommand());
+            rs = pst.executeQuery();
+            if (rs.next()) {
                 punkt++;
                 ANS5.setText("Pareiza atbilde");
                 ANS5.setForeground(Color.GREEN);
-             }else{
-                 ANS5.setText("Atbilde nav pareiza");
-                 ANS5.setForeground(Color.RED);
-             }
-             JRB13.setEnabled(false);
-             JRB14.setEnabled(false);
-             JRB15.setEnabled(false);
+            } else {
+                ANS5.setText("Atbilde nav pareiza");
+                ANS5.setForeground(Color.RED);
+            }
+            JRB13.setEnabled(false);
+            JRB14.setEnabled(false);
+            JRB15.setEnabled(false);
 
         } catch (SQLException e) {
             logerror.setVisible(true);
             logerror.pack();
             logerror.setLocationRelativeTo(null);
             errorL.setText("Please select a test answer.");
-            
-            
-
 
         }
     }//GEN-LAST:event_jButton5ActionPerformed
@@ -2347,7 +2364,7 @@ public class GUI extends javax.swing.JFrame {
     private void SaerchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SaerchKeyReleased
         Admin db = new Admin();
         String searchUser = Saerch.getText();
-        db.searchUser(searchUser,jTable1);
+        db.searchUser(searchUser, jTable1);
     }//GEN-LAST:event_SaerchKeyReleased
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -2367,23 +2384,23 @@ public class GUI extends javax.swing.JFrame {
     private void Search2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Search2KeyReleased
         Admin db = new Admin();
         String searchUser = Search2.getText();
-        db.searchUser(searchUser,jTable2);
+        db.searchUser(searchUser, jTable2);
     }//GEN-LAST:event_Search2KeyReleased
 
     private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
-    int selectedRow = jTable2.getSelectedRow();
-    if (selectedRow >= 0) {
-        String username = (String) jTable2.getValueAt(selectedRow, 0);
+        int selectedRow = jTable2.getSelectedRow();
+        if (selectedRow >= 0) {
+            String username = (String) jTable2.getValueAt(selectedRow, 0);
 
-        int response = JOptionPane.showConfirmDialog(null, "Vai tiešām vēlaties dzēst lietotāju " + username + "?", "Dzēšanas apstiprināšana", JOptionPane.YES_NO_OPTION);
+            int response = JOptionPane.showConfirmDialog(null, "Vai tiešām vēlaties dzēst lietotāju " + username + "?", "Dzēšanas apstiprināšana", JOptionPane.YES_NO_OPTION);
 
-        if (response == JOptionPane.YES_OPTION) {
-            Admin db = new Admin();
-            db.removeUser(jTable2);
+            if (response == JOptionPane.YES_OPTION) {
+                Admin db = new Admin();
+                db.removeUser(jTable2);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Lūdzu, atlasiet dzēšamo lietotāju.");
         }
-    } else {
-        JOptionPane.showMessageDialog(null, "Lūdzu, atlasiet dzēšamo lietotāju.");
-    }
     }//GEN-LAST:event_jTable2MouseClicked
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
@@ -2406,7 +2423,6 @@ public class GUI extends javax.swing.JFrame {
             return;
         }
 
-
         if (db.changePassword(username, newPassword)) {
             JOptionPane.showMessageDialog(this, "Parole ir veiksmīgi atjaunināta.");
             PassM.dispose();
@@ -2420,24 +2436,24 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void ParaditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ParaditActionPerformed
-          if (Paradit.isSelected ()) {
-                    PassMa.setEchoChar((char) 0);
-                    PassC.setEchoChar((char) 0);
-                } else {
-                    PassMa.setEchoChar('•');
-                    PassC.setEchoChar('•');
-                }
+        if (Paradit.isSelected()) {
+            PassMa.setEchoChar((char) 0);
+            PassC.setEchoChar((char) 0);
+        } else {
+            PassMa.setEchoChar('•');
+            PassC.setEchoChar('•');
+        }
 
     }//GEN-LAST:event_ParaditActionPerformed
 
     private void ParaditPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ParaditPassActionPerformed
-        if (ParaditPass.isSelected ()) {
-                    Password.setEchoChar((char) 0);
+        if (ParaditPass.isSelected()) {
+            Password.setEchoChar((char) 0);
 
-                } else {
-                    Password.setEchoChar('•');
+        } else {
+            Password.setEchoChar('•');
 
-                }
+        }
     }//GEN-LAST:event_ParaditPassActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -2447,7 +2463,7 @@ public class GUI extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         Question db = new Question(jList1);
-         title = jList1.getSelectedValue();
+        title = jList1.getSelectedValue();
         if (title != null) {
             testData = db.getTestData(title);
             jLabel29.setText(title);
@@ -2488,12 +2504,11 @@ public class GUI extends javax.swing.JFrame {
             JRB14.setActionCommand(JRB14.getText());
             JRB15.setActionCommand(JRB15.getText());
 
-
             Test.pack();
             Test.setLocationRelativeTo(null);
             Test.setVisible(true);
         } else {
-          
+
             logerror.setVisible(true);
             logerror.pack();
             logerror.setLocationRelativeTo(null);
@@ -2507,19 +2522,18 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-      Admin db = new Admin();
-      Question test = new Question(jList1);
+        Admin db = new Admin();
+        Question test = new Question(jList1);
         String title1 = Title.getText();
-        String question1 = qu1.getText(),question2 = qu2.getText(),question3 = qu3.getText(),question4 = qu4.getText(),question5 = qu5.getText();
-        String option1_1 = op1_1.getText(),option1_2 = op1_2.getText(),option1_3 = op1_3.getText(),option1_4 = op1_4.getText(),option1_5 = op1_5.getText() ;
-        String option2_1 = op2_1.getText(),option2_2 = op2_2.getText(),option2_3 = op2_3.getText(),option2_4 = op2_4.getText(),option2_5 = op2_5.getText();
-        String option3_1 = op3_1.getText(),option3_2 = op3_2.getText(),option3_3 = op3_3.getText(),option3_4 = op3_4.getText(),option3_5 = op3_5.getText();
-        String answer1 = an1.getText(),answer2 = an2.getText(),answer3 = an3.getText(),answer4 = an4.getText(),answer5 = an5.getText();
-        db.addQuestion(title1, question1, question2, question3, question4, question5, option1_1, option2_1, option3_1, option1_2, option2_2,option3_2,option1_3,option2_3,option3_3,option1_4,option2_4,option3_4,option1_5,option2_5,option3_5 );
-        db.addAnswer(answer1,answer2,answer3,answer4,answer5, title1);
+        String question1 = qu1.getText(), question2 = qu2.getText(), question3 = qu3.getText(), question4 = qu4.getText(), question5 = qu5.getText();
+        String option1_1 = op1_1.getText(), option1_2 = op1_2.getText(), option1_3 = op1_3.getText(), option1_4 = op1_4.getText(), option1_5 = op1_5.getText();
+        String option2_1 = op2_1.getText(), option2_2 = op2_2.getText(), option2_3 = op2_3.getText(), option2_4 = op2_4.getText(), option2_5 = op2_5.getText();
+        String option3_1 = op3_1.getText(), option3_2 = op3_2.getText(), option3_3 = op3_3.getText(), option3_4 = op3_4.getText(), option3_5 = op3_5.getText();
+        String answer1 = an1.getText(), answer2 = an2.getText(), answer3 = an3.getText(), answer4 = an4.getText(), answer5 = an5.getText();
+        db.addQuestion(title1, question1, question2, question3, question4, question5, option1_1, option2_1, option3_1, option1_2, option2_2, option3_2, option1_3, option2_3, option3_3, option1_4, option2_4, option3_4, option1_5, option2_5, option3_5);
+        db.addAnswer(answer1, answer2, answer3, answer4, answer5, title1);
 
         test.loadTitles();
-
 
         Title.setText("");
         op1_1.setText("Option1");
@@ -2546,25 +2560,25 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jTable3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseClicked
-       int selectedRow = jTable3.getSelectedRow();
-    if (selectedRow >= 0) {
-        String title = String.valueOf(jTable3.getValueAt(selectedRow, 1)) ;
+        int selectedRow = jTable3.getSelectedRow();
+        if (selectedRow >= 0) {
+            String title = String.valueOf(jTable3.getValueAt(selectedRow, 1));
 
-        int response = JOptionPane.showConfirmDialog(null, "Vai tiešām vēlaties dzēst Testu " + title + "?", "Dzēšanas apstiprināšana", JOptionPane.YES_NO_OPTION);
+            int response = JOptionPane.showConfirmDialog(null, "Vai tiešām vēlaties dzēst Testu " + title + "?", "Dzēšanas apstiprināšana", JOptionPane.YES_NO_OPTION);
 
-        if (response == JOptionPane.YES_OPTION) {
-            Question db = new Question(jList1);
-            db.removeTest(jTable3);
+            if (response == JOptionPane.YES_OPTION) {
+                Question db = new Question(jList1);
+                db.removeTest(jTable3);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Lūdzu, atlasiet dzēšamo Testu.");
         }
-    } else {
-        JOptionPane.showMessageDialog(null, "Lūdzu, atlasiet dzēšamo Testu.");
-    }
     }//GEN-LAST:event_jTable3MouseClicked
 
     private void SearchTestKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SearchTestKeyReleased
         Question db = new Question(jList1);
         String searchTest = SearchTest.getText();
-        db.searchTest(searchTest,jTable3);
+        db.searchTest(searchTest, jTable3);
     }//GEN-LAST:event_SearchTestKeyReleased
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
@@ -2589,69 +2603,66 @@ public class GUI extends javax.swing.JFrame {
         Rezult.setLocationRelativeTo(null);
         Rezult.setVisible(true);
 
-        
-
         double punkti = (punkt * 2);
 
-        Punkt.setText("Punkti:"+punkti+"/10.0");
+        Punkt.setText("Punkti:" + punkti + "/10.0");
 
         double procenti = (punkti / 10) * 100;
-        Proc.setText("Procenti:"+procenti+"%/100.0%");
+        Proc.setText("Procenti:" + procenti + "%/100.0%");
 
         int ball = 0;
         switch (punkt * 2) {
             case 2:
                 ball = 1;
-                Atz.setText("Mark:"+ball+"/5");
+                Atz.setText("Mark:" + ball + "/5");
                 Proc.setForeground(Color.RED);
                 Atz.setForeground(Color.RED);
                 Punkt.setForeground(Color.RED);
                 break;
             case 4:
                 ball = 2;
-                Atz.setText("Mark:"+ball+"/5");
+                Atz.setText("Mark:" + ball + "/5");
                 Proc.setForeground(Color.RED);
                 Atz.setForeground(Color.RED);
                 Punkt.setForeground(Color.RED);
                 break;
             case 6:
                 ball = 3;
-                Atz.setText("Mark:"+ball+"/5");
+                Atz.setText("Mark:" + ball + "/5");
                 Proc.setForeground(Color.YELLOW);
-                 Atz.setForeground(Color.YELLOW);
+                Atz.setForeground(Color.YELLOW);
                 Punkt.setForeground(Color.YELLOW);
                 break;
             case 8:
                 ball = 4;
-                Atz.setText("Mark:"+ball+"/5");
-                 Proc.setForeground(Color.GREEN);
-                 Atz.setForeground(Color.GREEN);
+                Atz.setText("Mark:" + ball + "/5");
+                Proc.setForeground(Color.GREEN);
+                Atz.setForeground(Color.GREEN);
                 Punkt.setForeground(Color.GREEN);
                 break;
             case 10:
                 ball = 5;
-                Atz.setText("Mark:"+ball+"/5");
+                Atz.setText("Mark:" + ball + "/5");
                 Proc.setForeground(Color.GREEN);
                 Atz.setForeground(Color.GREEN);
                 Punkt.setForeground(Color.GREEN);
                 break;
         }
-        if(megsk == 1 ){
-            Megsk.setText("Mēģinajuma skaits: 0/1");
+        if (megsk == 1) {
+            Megsk.setText("Mēģinajuma skaits: 1/1");
             Meiginat.setEnabled(false);
-        }else{
-          Megsk.setText("Mēģinajuma skaits: 1/1");
-          Meiginat.setEnabled(true);  
+        } else {
+            Megsk.setText("Mēģinajuma skaits: 0/1");
+            Meiginat.setEnabled(true);
         }
-
+         
+      
         String test = jList1.getSelectedValue();
         String username = Login.getText();
+        Nosaukums.setText("Testa nosaukums:"+"\n"+test);
+        UserR.setText("User name:"+"\n"+username);
 
-        db.save(username, ball, procenti, punkti, test,megsk);
-
-
-
-
+        db.save(username, ball, procenti, punkti, test, megsk);
 
 
     }//GEN-LAST:event_jButton6ActionPerformed
@@ -2659,7 +2670,7 @@ public class GUI extends javax.swing.JFrame {
     private void SearchRKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SearchRKeyReleased
         Tester dats = new Tester();
         String searchTest = SearchR.getText();
-        dats.searchRezult(searchTest,jTable4);
+        dats.searchRezult(searchTest, jTable4);
     }//GEN-LAST:event_SearchRKeyReleased
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
@@ -2668,23 +2679,55 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
-        
+
         ViewRezult.pack();
         ViewRezult.setLocationRelativeTo(null);
         ViewRezult.setVisible(true);
         Tester dats = new Tester();
-        dats.getResults(jTable4);  
+        dats.getResults(jTable4);
     }//GEN-LAST:event_jMenu3MouseClicked
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        megsk = 0;
+        
+        ANS1.setText("");
+        ANS2.setText("");
+        ANS3.setText("");
+        ANS4.setText("");
+        ANS5.setText("");
+
+        buttonGroup1.clearSelection();
+        buttonGroup2.clearSelection();
+        buttonGroup3.clearSelection();
+        buttonGroup4.clearSelection();
+        buttonGroup5.clearSelection();
+
+        JRB1.setEnabled(true);
+        JRB2.setEnabled(true);
+        JRB3.setEnabled(true);
+        JRB4.setEnabled(true);
+        JRB5.setEnabled(true);
+        JRB6.setEnabled(true);
+        JRB7.setEnabled(true);
+        JRB8.setEnabled(true);
+        JRB9.setEnabled(true);
+        JRB10.setEnabled(true);
+        JRB11.setEnabled(true);
+        JRB12.setEnabled(true);
+        JRB13.setEnabled(true);
+        JRB14.setEnabled(true);
+        JRB15.setEnabled(true);
+        
+        
+        
         Rezult.setVisible(false);
         Tester dats = new Tester();
-        dats.getResults(jTable4); 
-        
+        dats.getResults(jTable4);
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       logerror.dispose();
+        logerror.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jLabel27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel27MouseClicked
@@ -2697,7 +2740,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel27MouseClicked
 
     private void jLabel28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel28MouseClicked
-       ImageIcon imageIcon = new ImageIcon(getClass().getResource("/icone/HELP2.jpg"));
+        ImageIcon imageIcon = new ImageIcon(getClass().getResource("/icone/HELP2.jpg"));
         image.setIcon(imageIcon);
         HELPS.setViewportView(image);
         Help.setVisible(true);
@@ -2710,12 +2753,29 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jLabel41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel41MouseClicked
+        User db = new User();
+        
+        String login = Login.getText();
+        String password = Password.getText();
+        String grup = db.login(login, password);
+        
+        if("Skolotajs".equals(grup)){
+        ImageIcon imageIcon1 = new ImageIcon(getClass().getResource("/icone/HELP8.jpg"));
+        image.setIcon(imageIcon1);
+        HELPS.setViewportView(image);
+        Help.setVisible(true);
+        Help.pack();
+        Help.setLocationRelativeTo(null);    
+        }else{
+        
         ImageIcon imageIcon = new ImageIcon(getClass().getResource("/icone/HELP3.jpg"));
         image.setIcon(imageIcon);
         HELPS.setViewportView(image);
         Help.setVisible(true);
         Help.pack();
         Help.setLocationRelativeTo(null);
+        }
+       
     }//GEN-LAST:event_jLabel41MouseClicked
 
     private void jLabel35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel35MouseClicked
@@ -2726,6 +2786,60 @@ public class GUI extends javax.swing.JFrame {
         Help.pack();
         Help.setLocationRelativeTo(null);
     }//GEN-LAST:event_jLabel35MouseClicked
+
+    private void jLabel42MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel42MouseClicked
+        ImageIcon imageIcon = new ImageIcon(getClass().getResource("/icone/HELP5.jpg"));
+        image.setIcon(imageIcon);
+        HELPS.setViewportView(image);
+        Help.setVisible(true);
+        Help.pack();
+        Help.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jLabel42MouseClicked
+
+    private void jLabel43MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel43MouseClicked
+        ImageIcon imageIcon = new ImageIcon(getClass().getResource("/icone/HELP6.jpg"));
+        image.setIcon(imageIcon);
+        HELPS.setViewportView(image);
+        Help.setVisible(true);
+        Help.pack();
+        Help.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jLabel43MouseClicked
+
+    private void jLabel44MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel44MouseClicked
+        ImageIcon imageIcon = new ImageIcon(getClass().getResource("/icone/HELP7.jpg"));
+        image.setIcon(imageIcon);
+        HELPS.setViewportView(image);
+        Help.setVisible(true);
+        Help.pack();
+        Help.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jLabel44MouseClicked
+
+    private void jLabel45MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel45MouseClicked
+        ImageIcon imageIcon = new ImageIcon(getClass().getResource("/icone/HELP9.jpg"));
+        image.setIcon(imageIcon);
+        HELPS.setViewportView(image);
+        Help.setVisible(true);
+        Help.pack();
+        Help.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jLabel45MouseClicked
+
+    private void jLabel48MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel48MouseClicked
+        ImageIcon imageIcon = new ImageIcon(getClass().getResource("/icone/HELP10.jpg"));
+        image.setIcon(imageIcon);
+        HELPS.setViewportView(image);
+        Help.setVisible(true);
+        Help.pack();
+        Help.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jLabel48MouseClicked
+
+    private void jLabel26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel26MouseClicked
+        ImageIcon imageIcon = new ImageIcon(getClass().getResource("/icone/HELP11.jpg"));
+        image.setIcon(imageIcon);
+        HELPS.setViewportView(image);
+        Help.setVisible(true);
+        Help.pack();
+        Help.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jLabel26MouseClicked
 
     /**
      * @param args the command line arguments
@@ -2798,6 +2912,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JTextField LoginR;
     private javax.swing.JLabel Megsk;
     private javax.swing.JButton Meiginat;
+    private javax.swing.JLabel Nosaukums;
     private javax.swing.JCheckBox Paradit;
     private javax.swing.JCheckBox ParaditPass;
     private javax.swing.JPasswordField PassC;
@@ -2825,6 +2940,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JDialog TestTools;
     private javax.swing.JTextField Title;
     private javax.swing.JTextField UserM;
+    private javax.swing.JLabel UserR;
     private javax.swing.JDialog ViewRezult;
     private javax.swing.JDialog ViewUser;
     private javax.swing.JTextField an1;
@@ -2861,8 +2977,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
