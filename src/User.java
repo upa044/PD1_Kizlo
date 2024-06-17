@@ -14,11 +14,10 @@ public class User {
     public boolean User(String login, String password) {
         String query = "SELECT * FROM APP.USERS WHERE USERNAME = ?";
 
-        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);
-                PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+        try ( Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);  PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             preparedStatement.setString(1, login);
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+            try ( ResultSet resultSet = preparedStatement.executeQuery()) {
                 if (resultSet.next()) {
                     String dbPassword = resultSet.getString("PASSWORD");
                     return password.equals(dbPassword);
@@ -37,9 +36,8 @@ public class User {
     }
 
     public void connect() throws SQLException {
-        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);
-                Statement statement = connection.createStatement();) {
-            try (ResultSet resultSet
+        try ( Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);  Statement statement = connection.createStatement();) {
+            try ( ResultSet resultSet
                     = statement.executeQuery("SELECT * FROM APP.USERS");) {
                 while (resultSet.next()) {
                     System.out.print(resultSet.getInt("ID") + ". ");
@@ -54,6 +52,7 @@ public class User {
         }
 
     }
+
     public int loginstatus = 0;
     public String grup;
 
@@ -61,12 +60,11 @@ public class User {
 
         String query = "SELECT * FROM APP.USERS WHERE USERNAME = ? AND PASSWORD = ?";
 
-        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);
-                PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+        try ( Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);  PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             preparedStatement.setString(1, login);
             preparedStatement.setString(2, password);
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+            try ( ResultSet resultSet = preparedStatement.executeQuery()) {
                 if (resultSet.next()) {
                     grup = resultSet.getString("GRUP");
                     loginstatus = 1;
@@ -89,8 +87,7 @@ public class User {
     public boolean register(String username, String gender, String password, String birthStr, String grup) throws SQLException {
         String query = "INSERT INTO APP.REGISTRATION (USERNAME, GENDER, PASSWORD, BIRTH, GRUP) VALUES (?, ?, ?, ?, ?)";
 
-        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);
-                PreparedStatement stmt = connection.prepareStatement(query)) {
+        try ( Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);  PreparedStatement stmt = connection.prepareStatement(query)) {
 
             stmt.setString(1, username);
             stmt.setString(2, gender);
@@ -106,11 +103,9 @@ public class User {
         }
     }
 
-
     public boolean userlogin(String username, String password) throws SQLException {
         String query = "INSERT INTO APP.REGISTRATION (USERNAME, PASSWORD) VALUES (?, ?)";
-        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);
-                PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+        try ( Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);  PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             preparedStatement.setString(1, username);
             preparedStatement.setString(2, password);
@@ -127,8 +122,7 @@ public class User {
     public boolean sendToUsers(String username, String pass, String group) {
         String query = "INSERT INTO APP.USERS ( USERNAME, PASSWORD, GRUP) VALUES ( ?, ?, ?)";
 
-        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);
-                PreparedStatement stmt = connection.prepareStatement(query)) {
+        try ( Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);  PreparedStatement stmt = connection.prepareStatement(query)) {
 
             stmt.setString(1, username);
             stmt.setString(2, pass);
@@ -141,16 +135,14 @@ public class User {
             return false;
         }
     }
-    
-    public boolean changePassword(String username, String newPassword) {
-       String query = "UPDATE APP.USERS SET PASSWORD = ? WHERE USERNAME = ?";
 
-        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);
-             PreparedStatement stmt = connection.prepareStatement(query)) {
+    public boolean changePassword(String username, String newPassword) {
+        String query = "UPDATE APP.USERS SET PASSWORD = ? WHERE USERNAME = ?";
+
+        try ( Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);  PreparedStatement stmt = connection.prepareStatement(query)) {
 
             stmt.setString(1, newPassword);
             stmt.setString(2, username);
-            
 
             int rowsAff = stmt.executeUpdate();
             return rowsAff > 0;

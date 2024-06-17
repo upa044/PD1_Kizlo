@@ -5,56 +5,41 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 public class Tester {
-    
-   
-    
-    
-    String password;
+
     String question;
     String option1;
     String option2;
     String option3;
-    String option4;
     String answer;
     static final String DB_URL = "jdbc:derby://localhost:1527/connect";
     static final String DB_USER = "admin44";
     static final String DB_PASSWD = "Qwerty1234";
-    
-    public Tester(){
-        
+
+    public Tester() {
+
     }
-    
-    
-    
-    
-    
-    public boolean save(String username,int mark, double procenti,double punkti,String test,int repeat ){
-            
-       
+
+    public boolean save(String username, int mark, double procenti, double punkti, String test, int repeat) {
+
         String insertQuery = "INSERT INTO APP.REZULTATI (USERNAME,MARK,PROCENTI,PUNKTI,TEST,REPEAT) VALUES (?,?,?,?,?,?)";
 
-        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);
-         
-             PreparedStatement insertStmt = connection.prepareStatement(insertQuery)) {
+        try ( Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);  PreparedStatement insertStmt = connection.prepareStatement(insertQuery)) {
 
-            insertStmt.setString(1,username );
+            insertStmt.setString(1, username);
             insertStmt.setInt(2, mark);
             insertStmt.setDouble(3, procenti);
             insertStmt.setDouble(4, punkti);
-            insertStmt.setString(5,test );
+            insertStmt.setString(5, test);
             insertStmt.setInt(6, repeat);
-            
+
             int rowsAff = insertStmt.executeUpdate();
             return rowsAff > 0;
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
-        }  
+        }
     }
-    
-    public void load(){
-        
-    }
+
     public void searchRezult(String searchUser, JTable rezultTable) {
         String query = "SELECT * FROM APP.REZULTATI WHERE USERNAME LIKE ?";
 
@@ -92,9 +77,9 @@ public class Tester {
             e.printStackTrace();
         }
     }
-    
-    public void  getResults(JTable rezultTable){
-        
+
+    public void getResults(JTable rezultTable) {
+
         String query = "SELECT * FROM APP.REZULTATI";
 
         try {
@@ -130,9 +115,7 @@ public class Tester {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-       
+
     }
-    
-    
-    
+
 }

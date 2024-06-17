@@ -1,14 +1,12 @@
+
 import javax.swing.*;
 import java.sql.*;
 import java.util.Vector;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author user
- */
 public class Question {
-     static final String DB_URL = "jdbc:derby://localhost:1527/connect";
+
+    static final String DB_URL = "jdbc:derby://localhost:1527/connect";
     static final String DB_USER = "admin44";
     static final String DB_PASSWD = "Qwerty1234";
 
@@ -20,9 +18,7 @@ public class Question {
 
     public void loadTitles() {
         DefaultListModel<String> listModel = new DefaultListModel<>();
-        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);
-             Statement stmt = connection.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT TITLE FROM APP.QUESTION")) {
+        try ( Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);  Statement stmt = connection.createStatement();  ResultSet rs = stmt.executeQuery("SELECT TITLE FROM APP.QUESTION")) {
 
             while (rs.next()) {
                 String title = rs.getString("TITLE");
@@ -94,10 +90,11 @@ public class Question {
         }
 
         return data;
-        
+
     }
+
     public int getTestID(String title) {
-       
+
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
@@ -133,10 +130,10 @@ public class Question {
         }
 
         return 0;
-        
+
     }
-    
-    public void removeTest(JTable TestTable){
+
+    public void removeTest(JTable TestTable) {
         int selectedRow = TestTable.getSelectedRow();
         if (selectedRow >= 0) {
             String title = (String) TestTable.getValueAt(selectedRow, 1);
@@ -144,12 +141,12 @@ public class Question {
             String query1 = "DELETE FROM APP.QUESTION WHERE TITLE = ?";
             String query2 = "DELETE FROM APP.ANSWER WHERE TITLE = ?";
 
-            try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD); PreparedStatement stmt1 = connection.prepareStatement(query1); PreparedStatement stmt2 = connection.prepareStatement(query2)) {
+            try ( Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);  PreparedStatement stmt1 = connection.prepareStatement(query1);  PreparedStatement stmt2 = connection.prepareStatement(query2)) {
 
                 stmt1.setString(1, title);
                 int rowsAff1 = stmt1.executeUpdate();
 
-                // Удаление из таблицы User
+                
                 stmt2.setString(1, title);
                 int rowsAff2 = stmt2.executeUpdate();
 
@@ -166,9 +163,9 @@ public class Question {
             System.out.println("No Quiz selected.");
         }
     }
-        
-        public void searchTest(String searchTest, JTable TestTable){
-            String query = "SELECT * FROM APP.QUESTION WHERE TITLE LIKE ?";
+
+    public void searchTest(String searchTest, JTable TestTable) {
+        String query = "SELECT * FROM APP.QUESTION WHERE TITLE LIKE ?";
 
         try {
 
@@ -203,10 +200,10 @@ public class Question {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        
-            
-        }
-        public void viewTest(JTable TestTable) {
+
+    }
+
+    public void viewTest(JTable TestTable) {
 
         String query = "SELECT * FROM APP.QUESTION";
 
@@ -243,13 +240,6 @@ public class Question {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        }
-        
+    }
 
-        
-    
-    
-    
-    
-    
 }

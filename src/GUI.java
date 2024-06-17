@@ -55,7 +55,7 @@ public class GUI extends javax.swing.JFrame {
         Proc = new javax.swing.JLabel();
         Punkt = new javax.swing.JLabel();
         Meiginat = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        Sag_Iz = new javax.swing.JButton();
         jLabel35 = new javax.swing.JLabel();
         Megsk = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
@@ -69,22 +69,22 @@ public class GUI extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         AdminPan = new javax.swing.JDialog();
         jPanel12 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        Iziet2 = new javax.swing.JButton();
+        SaktTest = new javax.swing.JButton();
         jLabel22 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        VisiTesti = new javax.swing.JList<>();
         jLabel41 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
-        jMenu5 = new javax.swing.JMenu();
-        jMenu7 = new javax.swing.JMenu();
+        AddNewTest = new javax.swing.JMenu();
+        DeleteTesti = new javax.swing.JMenu();
+        AllSudRez = new javax.swing.JMenu();
+        ViewUs = new javax.swing.JMenu();
+        DeleteUs = new javax.swing.JMenu();
         Test = new javax.swing.JDialog();
         jPanel13 = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
+        Save = new javax.swing.JButton();
         Quest1 = new javax.swing.JLabel();
         Quest2 = new javax.swing.JLabel();
         Quest3 = new javax.swing.JLabel();
@@ -105,7 +105,7 @@ public class GUI extends javax.swing.JFrame {
         JRB13 = new javax.swing.JRadioButton();
         JRB14 = new javax.swing.JRadioButton();
         JRB15 = new javax.swing.JRadioButton();
-        jButton6 = new javax.swing.JButton();
+        Pabeigt = new javax.swing.JButton();
         ANS1 = new javax.swing.JLabel();
         ANS2 = new javax.swing.JLabel();
         ANS3 = new javax.swing.JLabel();
@@ -119,7 +119,7 @@ public class GUI extends javax.swing.JFrame {
         jLabel37 = new javax.swing.JLabel();
         Saerch = new javax.swing.JTextField();
         jLabel38 = new javax.swing.JLabel();
-        jButton8 = new javax.swing.JButton();
+        Iziet3 = new javax.swing.JButton();
         jLabel43 = new javax.swing.JLabel();
         DeleteUser = new javax.swing.JDialog();
         jPanel5 = new javax.swing.JPanel();
@@ -128,7 +128,7 @@ public class GUI extends javax.swing.JFrame {
         jTable2 = new javax.swing.JTable();
         jLabel14 = new javax.swing.JLabel();
         Search2 = new javax.swing.JTextField();
-        jButton9 = new javax.swing.JButton();
+        Iziet4 = new javax.swing.JButton();
         jLabel44 = new javax.swing.JLabel();
         PassM = new javax.swing.JDialog();
         jPanel9 = new javax.swing.JPanel();
@@ -183,11 +183,11 @@ public class GUI extends javax.swing.JFrame {
         an4 = new javax.swing.JTextField();
         an5 = new javax.swing.JTextField();
         jLabel46 = new javax.swing.JLabel();
-        buttonGroup1 = new javax.swing.ButtonGroup();
-        buttonGroup2 = new javax.swing.ButtonGroup();
-        buttonGroup3 = new javax.swing.ButtonGroup();
-        buttonGroup4 = new javax.swing.ButtonGroup();
-        buttonGroup5 = new javax.swing.ButtonGroup();
+        BG1 = new javax.swing.ButtonGroup();
+        BG2 = new javax.swing.ButtonGroup();
+        BG3 = new javax.swing.ButtonGroup();
+        BG4 = new javax.swing.ButtonGroup();
+        BG5 = new javax.swing.ButtonGroup();
         testSelector = new javax.swing.ButtonGroup();
         DeleteTest = new javax.swing.JDialog();
         jPanel8 = new javax.swing.JPanel();
@@ -196,7 +196,7 @@ public class GUI extends javax.swing.JFrame {
         jTable3 = new javax.swing.JTable();
         jLabel30 = new javax.swing.JLabel();
         SearchTest = new javax.swing.JTextField();
-        jButton10 = new javax.swing.JButton();
+        Iziet5 = new javax.swing.JButton();
         jLabel26 = new javax.swing.JLabel();
         ViewRezult = new javax.swing.JDialog();
         jPanel17 = new javax.swing.JPanel();
@@ -205,14 +205,14 @@ public class GUI extends javax.swing.JFrame {
         jLabel39 = new javax.swing.JLabel();
         SearchR = new javax.swing.JTextField();
         jLabel40 = new javax.swing.JLabel();
-        jButton13 = new javax.swing.JButton();
+        Iziet6 = new javax.swing.JButton();
         jLabel48 = new javax.swing.JLabel();
         Help = new javax.swing.JDialog();
         jPanel7 = new javax.swing.JPanel();
         HELPS = new javax.swing.JScrollPane();
         image = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
-        jButton14 = new javax.swing.JButton();
+        Ok = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -294,6 +294,7 @@ public class GUI extends javax.swing.JFrame {
         Grup.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<izvēlēties grupu(Skolotajs/Student)>", "Skolotajs", "Student", " " }));
 
         jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/hiclipart.com.png"))); // NOI18N
+        jLabel28.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel28.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel28MouseClicked(evt);
@@ -378,6 +379,7 @@ public class GUI extends javax.swing.JFrame {
 
         Rezult.setBounds(new java.awt.Rectangle(0, 0, 671, 455));
         Rezult.setMinimumSize(new java.awt.Dimension(671, 455));
+        Rezult.setPreferredSize(new java.awt.Dimension(671, 455));
         Rezult.setSize(new java.awt.Dimension(671, 455));
         Rezult.getContentPane().setLayout(null);
 
@@ -401,30 +403,33 @@ public class GUI extends javax.swing.JFrame {
         Punkt.setFont(new java.awt.Font("Segoe UI Black", 2, 18)); // NOI18N
         Punkt.setForeground(new java.awt.Color(153, 153, 153));
         Punkt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Punkt.setText("Punkti: X/20p");
+        Punkt.setText("Punkti: X/10p");
 
         Meiginat.setBackground(new java.awt.Color(255, 255, 255));
         Meiginat.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         Meiginat.setForeground(new java.awt.Color(0, 0, 0));
         Meiginat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/pngwing.com.jpg"))); // NOI18N
         Meiginat.setText("Mēģiniet vēlreiz");
+        Meiginat.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Meiginat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MeiginatActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(51, 255, 0));
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(0, 0, 0));
-        jButton4.setText("Saglabat un iziet");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        Sag_Iz.setBackground(new java.awt.Color(51, 255, 0));
+        Sag_Iz.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Sag_Iz.setForeground(new java.awt.Color(0, 0, 0));
+        Sag_Iz.setText("Saglabat un iziet");
+        Sag_Iz.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Sag_Iz.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                Sag_IzActionPerformed(evt);
             }
         });
 
         jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/hiclipart.com.png"))); // NOI18N
+        jLabel35.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel35.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel35MouseClicked(evt);
@@ -456,7 +461,7 @@ public class GUI extends javax.swing.JFrame {
                                 .addGap(13, 13, 13)
                                 .addComponent(Meiginat, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Sag_Iz, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(15, 15, 15))
                             .addComponent(Atz, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap())))
@@ -479,7 +484,7 @@ public class GUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Meiginat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Sag_Iz, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(29, 29, 29))
         );
 
@@ -558,6 +563,7 @@ public class GUI extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText("Ok");
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -600,23 +606,25 @@ public class GUI extends javax.swing.JFrame {
 
         jPanel12.setBackground(new java.awt.Color(0, 0, 0));
 
-        jButton1.setBackground(new java.awt.Color(204, 0, 51));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setText("Iziet");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Iziet2.setBackground(new java.awt.Color(204, 0, 51));
+        Iziet2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Iziet2.setForeground(new java.awt.Color(0, 0, 0));
+        Iziet2.setText("Iziet");
+        Iziet2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Iziet2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                Iziet2ActionPerformed(evt);
             }
         });
 
-        jButton7.setBackground(new java.awt.Color(255, 255, 255));
-        jButton7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(0, 0, 0));
-        jButton7.setText("Sakt Testu");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        SaktTest.setBackground(new java.awt.Color(255, 255, 255));
+        SaktTest.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        SaktTest.setForeground(new java.awt.Color(0, 0, 0));
+        SaktTest.setText("Sakt Testu");
+        SaktTest.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        SaktTest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                SaktTestActionPerformed(evt);
             }
         });
 
@@ -625,9 +633,10 @@ public class GUI extends javax.swing.JFrame {
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel22.setText("Testu Izvele");
 
-        jScrollPane4.setViewportView(jList1);
+        jScrollPane4.setViewportView(VisiTesti);
 
         jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/hiclipart.com.png"))); // NOI18N
+        jLabel41.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel41.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel41MouseClicked(evt);
@@ -647,9 +656,9 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane4)
                     .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addComponent(jButton7)
+                        .addComponent(SaktTest)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1)))
+                        .addComponent(Iziet2)))
                 .addContainerGap())
         );
         jPanel12Layout.setVerticalGroup(
@@ -662,50 +671,55 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton7)
-                    .addComponent(jButton1))
+                    .addComponent(SaktTest)
+                    .addComponent(Iziet2))
                 .addGap(46, 46, 46))
         );
 
-        jMenu1.setText("Add New Test");
-        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+        AddNewTest.setText("Add New Test");
+        AddNewTest.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        AddNewTest.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu1MouseClicked(evt);
+                AddNewTestMouseClicked(evt);
             }
         });
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(AddNewTest);
 
-        jMenu2.setText("Delete Test");
-        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
+        DeleteTesti.setText("Delete Test");
+        DeleteTesti.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        DeleteTesti.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu2MouseClicked(evt);
+                DeleteTestiMouseClicked(evt);
             }
         });
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(DeleteTesti);
 
-        jMenu3.setText("All Student Rezultat");
-        jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
+        AllSudRez.setText("All Student Rezultat");
+        AllSudRez.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        AllSudRez.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu3MouseClicked(evt);
+                AllSudRezMouseClicked(evt);
             }
         });
-        jMenuBar1.add(jMenu3);
+        jMenuBar1.add(AllSudRez);
 
-        jMenu5.setText("View Users");
-        jMenu5.addMouseListener(new java.awt.event.MouseAdapter() {
+        ViewUs.setText("View Users");
+        ViewUs.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ViewUs.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu5MouseClicked(evt);
+                ViewUsMouseClicked(evt);
             }
         });
-        jMenuBar1.add(jMenu5);
+        jMenuBar1.add(ViewUs);
 
-        jMenu7.setText("Delete User");
-        jMenu7.addMouseListener(new java.awt.event.MouseAdapter() {
+        DeleteUs.setText("Delete User");
+        DeleteUs.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        DeleteUs.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu7MouseClicked(evt);
+                DeleteUsMouseClicked(evt);
             }
         });
-        jMenuBar1.add(jMenu7);
+        jMenuBar1.add(DeleteUs);
 
         AdminPan.setJMenuBar(jMenuBar1);
 
@@ -729,107 +743,110 @@ public class GUI extends javax.swing.JFrame {
         jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel29.setText("Title");
 
-        jButton5.setBackground(new java.awt.Color(255, 255, 255));
-        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(0, 0, 0));
-        jButton5.setText("Save");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        Save.setBackground(new java.awt.Color(255, 255, 255));
+        Save.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Save.setForeground(new java.awt.Color(0, 0, 0));
+        Save.setText("Save");
+        Save.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Save.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                SaveActionPerformed(evt);
             }
         });
 
         Quest1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Quest1.setForeground(new java.awt.Color(255, 255, 255));
-        Quest1.setText("1)<        >?");
+        Quest1.setText("1)Question1?");
 
         Quest2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Quest2.setForeground(new java.awt.Color(255, 255, 255));
-        Quest2.setText("2)<        >?");
+        Quest2.setText("2)Question2?");
 
         Quest3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Quest3.setForeground(new java.awt.Color(255, 255, 255));
-        Quest3.setText("3)<        >?");
+        Quest3.setText("3)Question3?");
 
         Quest5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Quest5.setForeground(new java.awt.Color(255, 255, 255));
-        Quest5.setText("5)<        >?");
+        Quest5.setText("5)Question5?");
 
         Quest4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Quest4.setForeground(new java.awt.Color(255, 255, 255));
-        Quest4.setText("4)<        >?");
+        Quest4.setText("4)Question4?");
 
-        buttonGroup1.add(JRB1);
+        BG1.add(JRB1);
         JRB1.setForeground(new java.awt.Color(255, 255, 255));
-        JRB1.setText("jRadioButton1");
+        JRB1.setText("Option1");
 
-        buttonGroup1.add(JRB2);
+        BG1.add(JRB2);
         JRB2.setForeground(new java.awt.Color(255, 255, 255));
-        JRB2.setText("jRadioButton2");
+        JRB2.setText("Option2");
 
-        buttonGroup1.add(JRB3);
+        BG1.add(JRB3);
         JRB3.setForeground(new java.awt.Color(255, 255, 255));
-        JRB3.setText("jRadioButton3");
+        JRB3.setText("Option3");
 
-        buttonGroup2.add(JRB4);
+        BG2.add(JRB4);
         JRB4.setForeground(new java.awt.Color(255, 255, 255));
-        JRB4.setText("jRadioButton4");
+        JRB4.setText("Option1");
 
-        buttonGroup2.add(JRB5);
+        BG2.add(JRB5);
         JRB5.setForeground(new java.awt.Color(255, 255, 255));
-        JRB5.setText("jRadioButton5");
+        JRB5.setText("Option2");
 
-        buttonGroup2.add(JRB6);
+        BG2.add(JRB6);
         JRB6.setForeground(new java.awt.Color(255, 255, 255));
-        JRB6.setText("jRadioButton6");
+        JRB6.setText("Option3");
 
-        buttonGroup3.add(JRB7);
+        BG3.add(JRB7);
         JRB7.setForeground(new java.awt.Color(255, 255, 255));
-        JRB7.setText("jRadioButton7");
+        JRB7.setText("Option1");
 
-        buttonGroup3.add(JRB8);
+        BG3.add(JRB8);
         JRB8.setForeground(new java.awt.Color(255, 255, 255));
-        JRB8.setText("jRadioButton8");
+        JRB8.setText("Option2");
 
-        buttonGroup3.add(JRB9);
+        BG3.add(JRB9);
         JRB9.setForeground(new java.awt.Color(255, 255, 255));
-        JRB9.setText("jRadioButton9");
+        JRB9.setText("Option3");
 
-        buttonGroup4.add(JRB10);
+        BG4.add(JRB10);
         JRB10.setForeground(new java.awt.Color(255, 255, 255));
-        JRB10.setText("jRadioButton10");
+        JRB10.setText("Option1");
 
-        buttonGroup4.add(JRB11);
+        BG4.add(JRB11);
         JRB11.setForeground(new java.awt.Color(255, 255, 255));
-        JRB11.setText("jRadioButton11");
+        JRB11.setText("Option2");
 
-        buttonGroup4.add(JRB12);
+        BG4.add(JRB12);
         JRB12.setForeground(new java.awt.Color(255, 255, 255));
-        JRB12.setText("jRadioButton12");
+        JRB12.setText("Option3");
 
-        buttonGroup5.add(JRB13);
+        BG5.add(JRB13);
         JRB13.setForeground(new java.awt.Color(255, 255, 255));
-        JRB13.setText("jRadioButton13");
+        JRB13.setText("Option1");
 
-        buttonGroup5.add(JRB14);
+        BG5.add(JRB14);
         JRB14.setForeground(new java.awt.Color(255, 255, 255));
-        JRB14.setText("jRadioButton14");
+        JRB14.setText("Option2");
 
-        buttonGroup5.add(JRB15);
+        BG5.add(JRB15);
         JRB15.setForeground(new java.awt.Color(255, 255, 255));
-        JRB15.setText("jRadioButton15");
+        JRB15.setText("Option3");
 
-        jButton6.setBackground(new java.awt.Color(255, 255, 255));
-        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(0, 0, 0));
-        jButton6.setText("Pabeigt ");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        Pabeigt.setBackground(new java.awt.Color(255, 255, 255));
+        Pabeigt.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Pabeigt.setForeground(new java.awt.Color(0, 0, 0));
+        Pabeigt.setText("Pabeigt ");
+        Pabeigt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Pabeigt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                PabeigtActionPerformed(evt);
             }
         });
 
         jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/hiclipart.com.png"))); // NOI18N
+        jLabel42.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel42.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel42MouseClicked(evt);
@@ -890,9 +907,9 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addGap(202, 202, 202)
-                .addComponent(jButton5)
+                .addComponent(Save)
                 .addGap(27, 27, 27)
-                .addComponent(jButton6)
+                .addComponent(Pabeigt)
                 .addContainerGap(257, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
@@ -955,8 +972,8 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(JRB15)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Save)
+                    .addComponent(Pabeigt, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -994,6 +1011,7 @@ public class GUI extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        jTable1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jScrollPane1.setViewportView(jTable1);
 
         jLabel37.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
@@ -1011,17 +1029,19 @@ public class GUI extends javax.swing.JFrame {
         jLabel38.setForeground(new java.awt.Color(255, 255, 255));
         jLabel38.setText("Search:");
 
-        jButton8.setBackground(new java.awt.Color(204, 0, 51));
-        jButton8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(0, 0, 0));
-        jButton8.setText("Iziet");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        Iziet3.setBackground(new java.awt.Color(204, 0, 51));
+        Iziet3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Iziet3.setForeground(new java.awt.Color(0, 0, 0));
+        Iziet3.setText("Iziet");
+        Iziet3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Iziet3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                Iziet3ActionPerformed(evt);
             }
         });
 
         jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/hiclipart.com.png"))); // NOI18N
+        jLabel43.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel43.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel43MouseClicked(evt);
@@ -1051,7 +1071,7 @@ public class GUI extends javax.swing.JFrame {
                                 .addComponent(jLabel43)
                                 .addContainerGap())
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
-                                .addComponent(jButton8)
+                                .addComponent(Iziet3)
                                 .addGap(357, 357, 357))))))
         );
         jPanel14Layout.setVerticalGroup(
@@ -1068,7 +1088,7 @@ public class GUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton8)
+                .addComponent(Iziet3)
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
@@ -1111,6 +1131,7 @@ public class GUI extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        jTable2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTable2MouseClicked(evt);
@@ -1128,16 +1149,18 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        jButton9.setBackground(new java.awt.Color(153, 0, 0));
-        jButton9.setForeground(new java.awt.Color(0, 0, 0));
-        jButton9.setText("Iziet");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        Iziet4.setBackground(new java.awt.Color(153, 0, 0));
+        Iziet4.setForeground(new java.awt.Color(0, 0, 0));
+        Iziet4.setText("Iziet");
+        Iziet4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Iziet4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                Iziet4ActionPerformed(evt);
             }
         });
 
         jLabel44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/hiclipart.com.png"))); // NOI18N
+        jLabel44.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel44.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel44MouseClicked(evt);
@@ -1167,7 +1190,7 @@ public class GUI extends javax.swing.JFrame {
                                 .addComponent(jLabel44)
                                 .addGap(3, 3, 3))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                                .addComponent(jButton9)
+                                .addComponent(Iziet4)
                                 .addGap(358, 358, 358))))))
         );
         jPanel5Layout.setVerticalGroup(
@@ -1184,7 +1207,7 @@ public class GUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton9)
+                .addComponent(Iziet4)
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
@@ -1225,6 +1248,7 @@ public class GUI extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setText("Exit");
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -1245,6 +1269,7 @@ public class GUI extends javax.swing.JFrame {
         jLabel17.setText("Password change");
 
         jLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/hiclipart.com.png"))); // NOI18N
+        jLabel45.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel45.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel45MouseClicked(evt);
@@ -1275,6 +1300,7 @@ public class GUI extends javax.swing.JFrame {
         Paradit.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         Paradit.setForeground(new java.awt.Color(255, 255, 255));
         Paradit.setText("Parādīt paroli.");
+        Paradit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Paradit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ParaditActionPerformed(evt);
@@ -1401,6 +1427,7 @@ public class GUI extends javax.swing.JFrame {
         jButton11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton11.setForeground(new java.awt.Color(0, 0, 0));
         jButton11.setText("Save Tools");
+        jButton11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton11ActionPerformed(evt);
@@ -1411,6 +1438,7 @@ public class GUI extends javax.swing.JFrame {
         jButton12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton12.setForeground(new java.awt.Color(0, 0, 0));
         jButton12.setText("Exit");
+        jButton12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton12ActionPerformed(evt);
@@ -1458,6 +1486,7 @@ public class GUI extends javax.swing.JFrame {
         an5.setText("Answer(5)");
 
         jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/hiclipart.com.png"))); // NOI18N
+        jLabel46.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
@@ -1647,6 +1676,7 @@ public class GUI extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        jTable3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jTable3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTable3MouseClicked(evt);
@@ -1664,16 +1694,18 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        jButton10.setBackground(new java.awt.Color(153, 0, 0));
-        jButton10.setForeground(new java.awt.Color(0, 0, 0));
-        jButton10.setText("Iziet");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        Iziet5.setBackground(new java.awt.Color(153, 0, 0));
+        Iziet5.setForeground(new java.awt.Color(0, 0, 0));
+        Iziet5.setText("Iziet");
+        Iziet5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Iziet5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                Iziet5ActionPerformed(evt);
             }
         });
 
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/hiclipart.com.png"))); // NOI18N
+        jLabel26.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel26.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel26MouseClicked(evt);
@@ -1699,7 +1731,7 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton10)
+                .addComponent(Iziet5)
                 .addGap(521, 521, 521))
         );
         jPanel8Layout.setVerticalGroup(
@@ -1719,7 +1751,7 @@ public class GUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton10)
+                .addComponent(Iziet5)
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
@@ -1761,6 +1793,7 @@ public class GUI extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        jTable4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jScrollPane2.setViewportView(jTable4);
 
         jLabel39.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
@@ -1778,17 +1811,19 @@ public class GUI extends javax.swing.JFrame {
         jLabel40.setForeground(new java.awt.Color(255, 255, 255));
         jLabel40.setText("Search:");
 
-        jButton13.setBackground(new java.awt.Color(204, 0, 51));
-        jButton13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton13.setForeground(new java.awt.Color(0, 0, 0));
-        jButton13.setText("Iziet");
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
+        Iziet6.setBackground(new java.awt.Color(204, 0, 51));
+        Iziet6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Iziet6.setForeground(new java.awt.Color(0, 0, 0));
+        Iziet6.setText("Iziet");
+        Iziet6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Iziet6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
+                Iziet6ActionPerformed(evt);
             }
         });
 
         jLabel48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icone/hiclipart.com.png"))); // NOI18N
+        jLabel48.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel48.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel48MouseClicked(evt);
@@ -1814,7 +1849,7 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton13)
+                .addComponent(Iziet6)
                 .addGap(365, 365, 365))
         );
         jPanel17Layout.setVerticalGroup(
@@ -1834,7 +1869,7 @@ public class GUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton13)
+                .addComponent(Iziet6)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1865,13 +1900,13 @@ public class GUI extends javax.swing.JFrame {
         jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel47.setText("Help Window");
 
-        jButton14.setBackground(new java.awt.Color(255, 255, 255));
-        jButton14.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton14.setForeground(new java.awt.Color(0, 0, 0));
-        jButton14.setText("Exit");
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
+        Ok.setBackground(new java.awt.Color(255, 255, 255));
+        Ok.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Ok.setForeground(new java.awt.Color(0, 0, 0));
+        Ok.setText("Exit");
+        Ok.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                OkActionPerformed(evt);
             }
         });
 
@@ -1889,7 +1924,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGap(36, 36, 36))
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(182, 182, 182)
-                .addComponent(jButton14)
+                .addComponent(Ok)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
@@ -1900,7 +1935,7 @@ public class GUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(HELPS, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton14)
+                .addComponent(Ok)
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
@@ -1908,11 +1943,11 @@ public class GUI extends javax.swing.JFrame {
         jPanel7.setBounds(0, 0, 440, 510);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBounds(new java.awt.Rectangle(0, 0, 500, 335));
+        setBounds(new java.awt.Rectangle(0, 0, 500, 340));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setMinimumSize(null);
-        setPreferredSize(new java.awt.Dimension(500, 335));
-        setSize(new java.awt.Dimension(500, 335));
+        setMinimumSize(new java.awt.Dimension(500, 340));
+        setPreferredSize(new java.awt.Dimension(500, 340));
+        setSize(new java.awt.Dimension(500, 340));
         getContentPane().setLayout(null);
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
@@ -1980,6 +2015,7 @@ public class GUI extends javax.swing.JFrame {
         ParaditPass.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         ParaditPass.setForeground(new java.awt.Color(255, 255, 255));
         ParaditPass.setText("Parādīt paroli.");
+        ParaditPass.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ParaditPass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ParaditPassActionPerformed(evt);
@@ -2063,7 +2099,7 @@ public class GUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void IenaktActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IenaktActionPerformed
-        Question test = new Question(jList1);
+        Question test = new Question(VisiTesti);
         User db = new User();
 
         String login = Login.getText();
@@ -2083,7 +2119,7 @@ public class GUI extends javax.swing.JFrame {
 
             } else {
                 test.loadTitles();
-                AdminPan.pack();
+                AdminPan.setBounds(0,0,592,342);
                 AdminPan.setLocationRelativeTo(null);
                 AdminPan.setVisible(true);
                 jMenuBar1.setVisible(false);
@@ -2094,10 +2130,6 @@ public class GUI extends javax.swing.JFrame {
             logerror.setLocationRelativeTo(null);
             errorL.setText("Invalid login or password");
         }
-
-        Password.setText("");
-
-
     }//GEN-LAST:event_IenaktActionPerformed
 
     private void RegMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegMouseClicked
@@ -2152,8 +2184,8 @@ public class GUI extends javax.swing.JFrame {
 
     private void MeiginatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MeiginatActionPerformed
 
-        Question db = new Question(jList1);
-        title = jList1.getSelectedValue();
+        Question db = new Question(VisiTesti);
+        title = VisiTesti.getSelectedValue();
         if (title != null) {
             testData = db.getTestData(title);
             jLabel29.setText(title);
@@ -2200,11 +2232,11 @@ public class GUI extends javax.swing.JFrame {
             ANS4.setText("");
             ANS5.setText("");
 
-            buttonGroup1.clearSelection();
-            buttonGroup2.clearSelection();
-            buttonGroup3.clearSelection();
-            buttonGroup4.clearSelection();
-            buttonGroup5.clearSelection();
+            BG1.clearSelection();
+            BG2.clearSelection();
+            BG3.clearSelection();
+            BG4.clearSelection();
+            BG5.clearSelection();
 
             JRB1.setEnabled(true);
             JRB2.setEnabled(true);
@@ -2236,22 +2268,22 @@ public class GUI extends javax.swing.JFrame {
 
     }//GEN-LAST:event_MeiginatActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        Question db = new Question(jList1);
+    private void SaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveActionPerformed
+        Question db = new Question(VisiTesti);
         punkt = 0;
         String checkAnswer1 = "SELECT * FROM APP.ANSWER WHERE TITLE=? AND AN1 =? ";
         String checkAnswer2 = "SELECT * FROM APP.ANSWER WHERE TITLE=? AND AN2 =? ";
         String checkAnswer3 = "SELECT * FROM APP.ANSWER WHERE TITLE=? AND AN3 =? ";
         String checkAnswer4 = "SELECT * FROM APP.ANSWER WHERE TITLE=? AND AN4 =? ";
         String checkAnswer5 = "SELECT * FROM APP.ANSWER WHERE TITLE=? AND AN5 =? ";
-        title = jList1.getSelectedValue();
+        title = VisiTesti.getSelectedValue();
 
         try (Connection connection = DriverManager.getConnection(Question.DB_URL, Question.DB_USER, Question.DB_PASSWD);) {
             PreparedStatement pst;
             ResultSet rs;
             pst = connection.prepareStatement(checkAnswer1);
             pst.setString(1, title);
-            pst.setString(2, buttonGroup1.getSelection().getActionCommand());
+            pst.setString(2, BG1.getSelection().getActionCommand());
             rs = pst.executeQuery();
             if (rs.next()) {
                 punkt++;
@@ -2268,7 +2300,7 @@ public class GUI extends javax.swing.JFrame {
 
             pst = connection.prepareStatement(checkAnswer2);
             pst.setString(1, title);
-            pst.setString(2, buttonGroup2.getSelection().getActionCommand());
+            pst.setString(2, BG2.getSelection().getActionCommand());
             rs = pst.executeQuery();
             if (rs.next()) {
                 punkt++;
@@ -2285,7 +2317,7 @@ public class GUI extends javax.swing.JFrame {
 
             pst = connection.prepareStatement(checkAnswer3);
             pst.setString(1, title);
-            pst.setString(2, buttonGroup3.getSelection().getActionCommand());
+            pst.setString(2, BG3.getSelection().getActionCommand());
             rs = pst.executeQuery();
             if (rs.next()) {
                 punkt++;
@@ -2302,7 +2334,7 @@ public class GUI extends javax.swing.JFrame {
 
             pst = connection.prepareStatement(checkAnswer4);
             pst.setString(1, title);
-            pst.setString(2, buttonGroup4.getSelection().getActionCommand());
+            pst.setString(2, BG4.getSelection().getActionCommand());
             rs = pst.executeQuery();
             if (rs.next()) {
                 punkt++;
@@ -2319,7 +2351,7 @@ public class GUI extends javax.swing.JFrame {
 
             pst = connection.prepareStatement(checkAnswer5);
             pst.setString(1, title);
-            pst.setString(2, buttonGroup5.getSelection().getActionCommand());
+            pst.setString(2, BG5.getSelection().getActionCommand());
             rs = pst.executeQuery();
             if (rs.next()) {
                 punkt++;
@@ -2340,16 +2372,16 @@ public class GUI extends javax.swing.JFrame {
             errorL.setText("Please select a test answer.");
 
         }
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_SaveActionPerformed
 
-    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+    private void AddNewTestMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddNewTestMouseClicked
         this.setVisible(false);
         TestTools.pack();
         TestTools.setLocationRelativeTo(null);
         TestTools.setVisible(true);
-    }//GEN-LAST:event_jMenu1MouseClicked
+    }//GEN-LAST:event_AddNewTestMouseClicked
 
-    private void jMenu5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu5MouseClicked
+    private void ViewUsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewUsMouseClicked
 
         this.setVisible(false);
         ViewUser.pack();
@@ -2359,7 +2391,7 @@ public class GUI extends javax.swing.JFrame {
         db.viewuser(jTable1);
 
 
-    }//GEN-LAST:event_jMenu5MouseClicked
+    }//GEN-LAST:event_ViewUsMouseClicked
 
     private void SaerchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SaerchKeyReleased
         Admin db = new Admin();
@@ -2367,19 +2399,19 @@ public class GUI extends javax.swing.JFrame {
         db.searchUser(searchUser, jTable1);
     }//GEN-LAST:event_SaerchKeyReleased
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void Iziet3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Iziet3ActionPerformed
         ViewUser.dispose();
-        setVisible(true);
-    }//GEN-LAST:event_jButton8ActionPerformed
+        AdminPan.setVisible(true);
+    }//GEN-LAST:event_Iziet3ActionPerformed
 
-    private void jMenu7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu7MouseClicked
+    private void DeleteUsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DeleteUsMouseClicked
         this.setVisible(false);
         DeleteUser.pack();
         DeleteUser.setLocationRelativeTo(null);
         DeleteUser.setVisible(true);
         Admin db = new Admin();
         db.viewuser(jTable2);
-    }//GEN-LAST:event_jMenu7MouseClicked
+    }//GEN-LAST:event_DeleteUsMouseClicked
 
     private void Search2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Search2KeyReleased
         Admin db = new Admin();
@@ -2403,9 +2435,9 @@ public class GUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jTable2MouseClicked
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void Iziet4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Iziet4ActionPerformed
         DeleteUser.dispose();
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }//GEN-LAST:event_Iziet4ActionPerformed
 
     private void SaveCPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveCPActionPerformed
         User db = new User();
@@ -2456,14 +2488,14 @@ public class GUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ParaditPassActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void Iziet2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Iziet2ActionPerformed
         AdminPan.dispose();
         setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_Iziet2ActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        Question db = new Question(jList1);
-        title = jList1.getSelectedValue();
+    private void SaktTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaktTestActionPerformed
+        Question db = new Question(VisiTesti);
+        title = VisiTesti.getSelectedValue();
         if (title != null) {
             testData = db.getTestData(title);
             jLabel29.setText(title);
@@ -2515,7 +2547,7 @@ public class GUI extends javax.swing.JFrame {
             errorL.setText("Please select a test.");
         }
 
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_SaktTestActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         TestTools.dispose();
@@ -2523,7 +2555,7 @@ public class GUI extends javax.swing.JFrame {
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         Admin db = new Admin();
-        Question test = new Question(jList1);
+        Question test = new Question(VisiTesti);
         String title1 = Title.getText();
         String question1 = qu1.getText(), question2 = qu2.getText(), question3 = qu3.getText(), question4 = qu4.getText(), question5 = qu5.getText();
         String option1_1 = op1_1.getText(), option1_2 = op1_2.getText(), option1_3 = op1_3.getText(), option1_4 = op1_4.getText(), option1_5 = op1_5.getText();
@@ -2567,7 +2599,7 @@ public class GUI extends javax.swing.JFrame {
             int response = JOptionPane.showConfirmDialog(null, "Vai tiešām vēlaties dzēst Testu " + title + "?", "Dzēšanas apstiprināšana", JOptionPane.YES_NO_OPTION);
 
             if (response == JOptionPane.YES_OPTION) {
-                Question db = new Question(jList1);
+                Question db = new Question(VisiTesti);
                 db.removeTest(jTable3);
             }
         } else {
@@ -2576,27 +2608,27 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jTable3MouseClicked
 
     private void SearchTestKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SearchTestKeyReleased
-        Question db = new Question(jList1);
+        Question db = new Question(VisiTesti);
         String searchTest = SearchTest.getText();
         db.searchTest(searchTest, jTable3);
     }//GEN-LAST:event_SearchTestKeyReleased
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        Question db = new Question(jList1);
+    private void Iziet5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Iziet5ActionPerformed
+        Question db = new Question(VisiTesti);
         db.loadTitles();
         DeleteTest.dispose();
-    }//GEN-LAST:event_jButton10ActionPerformed
+    }//GEN-LAST:event_Iziet5ActionPerformed
 
-    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
+    private void DeleteTestiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DeleteTestiMouseClicked
         this.setVisible(false);
         DeleteTest.pack();
         DeleteTest.setLocationRelativeTo(null);
         DeleteTest.setVisible(true);
-        Question db = new Question(jList1);
+        Question db = new Question(VisiTesti);
         db.viewTest(jTable3);
-    }//GEN-LAST:event_jMenu2MouseClicked
+    }//GEN-LAST:event_DeleteTestiMouseClicked
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void PabeigtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PabeigtActionPerformed
         Tester db = new Tester();
         Test.setVisible(false);
         Rezult.pack();
@@ -2657,7 +2689,7 @@ public class GUI extends javax.swing.JFrame {
         }
          
       
-        String test = jList1.getSelectedValue();
+        String test = VisiTesti.getSelectedValue();
         String username = Login.getText();
         Nosaukums.setText("Testa nosaukums:"+"\n"+test);
         UserR.setText("User name:"+"\n"+username);
@@ -2665,7 +2697,7 @@ public class GUI extends javax.swing.JFrame {
         db.save(username, ball, procenti, punkti, test, megsk);
 
 
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_PabeigtActionPerformed
 
     private void SearchRKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SearchRKeyReleased
         Tester dats = new Tester();
@@ -2673,21 +2705,21 @@ public class GUI extends javax.swing.JFrame {
         dats.searchRezult(searchTest, jTable4);
     }//GEN-LAST:event_SearchRKeyReleased
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+    private void Iziet6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Iziet6ActionPerformed
         ViewRezult.dispose();
-        setVisible(true);
-    }//GEN-LAST:event_jButton13ActionPerformed
+        AdminPan.setVisible(true);
+    }//GEN-LAST:event_Iziet6ActionPerformed
 
-    private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
+    private void AllSudRezMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AllSudRezMouseClicked
 
         ViewRezult.pack();
         ViewRezult.setLocationRelativeTo(null);
         ViewRezult.setVisible(true);
         Tester dats = new Tester();
         dats.getResults(jTable4);
-    }//GEN-LAST:event_jMenu3MouseClicked
+    }//GEN-LAST:event_AllSudRezMouseClicked
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void Sag_IzActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sag_IzActionPerformed
         megsk = 0;
         
         ANS1.setText("");
@@ -2696,11 +2728,11 @@ public class GUI extends javax.swing.JFrame {
         ANS4.setText("");
         ANS5.setText("");
 
-        buttonGroup1.clearSelection();
-        buttonGroup2.clearSelection();
-        buttonGroup3.clearSelection();
-        buttonGroup4.clearSelection();
-        buttonGroup5.clearSelection();
+        BG1.clearSelection();
+        BG2.clearSelection();
+        BG3.clearSelection();
+        BG4.clearSelection();
+        BG5.clearSelection();
 
         JRB1.setEnabled(true);
         JRB2.setEnabled(true);
@@ -2724,7 +2756,7 @@ public class GUI extends javax.swing.JFrame {
         Tester dats = new Tester();
         dats.getResults(jTable4);
 
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_Sag_IzActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         logerror.dispose();
@@ -2748,9 +2780,9 @@ public class GUI extends javax.swing.JFrame {
         Help.setLocationRelativeTo(null);
     }//GEN-LAST:event_jLabel28MouseClicked
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+    private void OkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OkActionPerformed
         Help.dispose();
-    }//GEN-LAST:event_jButton14ActionPerformed
+    }//GEN-LAST:event_OkActionPerformed
 
     private void jLabel41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel41MouseClicked
         User db = new User();
@@ -2882,10 +2914,19 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel ANS3;
     private javax.swing.JLabel ANS4;
     private javax.swing.JLabel ANS5;
+    private javax.swing.JMenu AddNewTest;
     private javax.swing.JDialog AdminPan;
+    private javax.swing.JMenu AllSudRez;
     private javax.swing.JLabel Atz;
+    private javax.swing.ButtonGroup BG1;
+    private javax.swing.ButtonGroup BG2;
+    private javax.swing.ButtonGroup BG3;
+    private javax.swing.ButtonGroup BG4;
+    private javax.swing.ButtonGroup BG5;
     private javax.swing.JTextField Date;
     private javax.swing.JDialog DeleteTest;
+    private javax.swing.JMenu DeleteTesti;
+    private javax.swing.JMenu DeleteUs;
     private javax.swing.JDialog DeleteUser;
     private javax.swing.JComboBox<String> Gender;
     private javax.swing.JComboBox<String> Grup;
@@ -2893,6 +2934,11 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JDialog Help;
     private javax.swing.JButton IelogotiesR;
     private javax.swing.JButton Ienakt;
+    private javax.swing.JButton Iziet2;
+    private javax.swing.JButton Iziet3;
+    private javax.swing.JButton Iziet4;
+    private javax.swing.JButton Iziet5;
+    private javax.swing.JButton Iziet6;
     private javax.swing.JRadioButton JRB1;
     private javax.swing.JRadioButton JRB10;
     private javax.swing.JRadioButton JRB11;
@@ -2913,6 +2959,8 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel Megsk;
     private javax.swing.JButton Meiginat;
     private javax.swing.JLabel Nosaukums;
+    private javax.swing.JButton Ok;
+    private javax.swing.JButton Pabeigt;
     private javax.swing.JCheckBox Paradit;
     private javax.swing.JCheckBox ParaditPass;
     private javax.swing.JPasswordField PassC;
@@ -2932,6 +2980,9 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel RemPass;
     private javax.swing.JDialog Rezult;
     private javax.swing.JTextField Saerch;
+    private javax.swing.JButton Sag_Iz;
+    private javax.swing.JButton SaktTest;
+    private javax.swing.JButton Save;
     private javax.swing.JButton SaveCP;
     private javax.swing.JTextField Search2;
     private javax.swing.JTextField SearchR;
@@ -2942,35 +2993,22 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JTextField UserM;
     private javax.swing.JLabel UserR;
     private javax.swing.JDialog ViewRezult;
+    private javax.swing.JMenu ViewUs;
     private javax.swing.JDialog ViewUser;
+    private javax.swing.JList<String> VisiTesti;
     private javax.swing.JTextField an1;
     private javax.swing.JTextField an2;
     private javax.swing.JTextField an3;
     private javax.swing.JTextField an4;
     private javax.swing.JTextField an5;
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.ButtonGroup buttonGroup3;
-    private javax.swing.ButtonGroup buttonGroup4;
-    private javax.swing.ButtonGroup buttonGroup5;
     private javax.swing.JLabel errorL;
     private javax.swing.JLabel image;
     private javax.swing.JButton iziet;
     private javax.swing.JButton iziet1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -3017,12 +3055,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JList<String> jList1;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;

@@ -10,7 +10,6 @@ public class Admin extends User {
     String option1;
     String option2;
     String option3;
-    String option4;
     String answer;
     static final String DB_URL = "jdbc:derby://localhost:1527/connect";
     static final String DB_USER = "admin44";
@@ -18,7 +17,7 @@ public class Admin extends User {
     
 
 
-    Admin() {
+    public Admin() {
 
     }
 
@@ -100,9 +99,6 @@ public class Admin extends User {
         }
     }
 
-    public void addTest(String title, Tester test) {
-
-    }
 
     public boolean addAnswer(String answer1,String answer2,String answer3,String answer4,String answer5,String title1) {
       
@@ -192,15 +188,6 @@ public class Admin extends User {
     }
     
 
-    
-   
-
-    public void removeTest(Tester test) {
-    }
-
-    public void removeQuestion(Question question) {
-    }
-
     public void removeUser(JTable userTable) {
         int selectedRow = userTable.getSelectedRow();
         if (selectedRow >= 0) {
@@ -228,7 +215,7 @@ public class Admin extends User {
                 stmt1.setString(1, username);
                 int rowsAff1 = stmt1.executeUpdate();
 
-                // Удаление из таблицы User
+          
                 stmt2.setString(1, username);
                 int rowsAff2 = stmt2.executeUpdate();
 
